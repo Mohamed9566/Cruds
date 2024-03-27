@@ -266,11 +266,11 @@ width: 30%;
 }
 .input input:focus{
   background: #000;
-  transform: scale(1.1);
+  border:1px solid rgb(59, 2, 59)
 }
 .searchBlock input:focus{
   background: #000;
-  transform: scale(1.1);
+  border:1px solid rgb(59, 2, 59)
 }
 .salesVolume{
   margin: 10px 0px;
