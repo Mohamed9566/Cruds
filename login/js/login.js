@@ -37,7 +37,7 @@ document.getElementById("login").addEventListener("click", function(event) {
   // Check if username and password match
   if (username === "admin" && password === localStorage.getItem("savedPassword")) {
       // Redirect to another page
-      window.location.href = "../home/home.html";
+      window.location.href = "home/home.html";
   } else {
       alert("Invalid username or password. Please try again.");
   }
