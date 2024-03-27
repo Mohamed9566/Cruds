@@ -153,18 +153,28 @@ function showData(){
 //DELETE 
 
 function deleteData(i) {
-  dataPro.splice(i,1);
-  localStorage.product=JSON.stringify(dataPro);
-  showData();
+  if(mood==='create'){
+      if (confirm("Are you sure you want to delete this item?")) {
+    dataPro.splice(i,1);
+    localStorage.product=JSON.stringify(dataPro);
+    showData();
+    } 
+  }
+  
+
 }
 showData()
 
 //Delete All Data 
 
 function deleteAll(){
-  localStorage.clear();
-  dataPro.splice(0);
-  showData()
+  if(mood==='create'){
+    if (confirm("Are you sure you want to delete all items?")) {
+    localStorage.clear();
+    dataPro.splice(0);
+    showData()
+} 
+  }
 }
 
 //update data
@@ -179,6 +189,7 @@ function updateData(i){
   count.value=dataPro[i].count;
 
   getTotal()
+
   create.innerHTML='update';
   mood='update';
   tmp=i;
@@ -256,10 +267,15 @@ function searchData(value){
 
 function openForm() {
   document.getElementById("myForm").style.display = "block";
+  let overlay =document.getElementById('overlay');
+  overlay.classList.add("show");
+
 }
 
 function closeForm() {
   document.getElementById("myForm").style.display = "none";
+  let overlay =document.getElementById('overlay');
+  overlay.classList.remove("show");
 }
 
 

@@ -49,7 +49,8 @@ function togglePasswordVisibility() {
 document.getElementById("showPasswordCheckbox").addEventListener("change", togglePasswordVisibility);
 
 // JavaScript for updating password functionality
-document.getElementById("save").addEventListener("click", function() {
+document.getElementById("save").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent the default form submission
   let currentPassword = document.getElementById('currentPassword').value;
   let newPassword = document.getElementById('newPassword').value;
   let confirmPassword = document.getElementById('confirmPassword').value;
@@ -66,5 +67,7 @@ document.getElementById("save").addEventListener("click", function() {
       }
   } else {
       alert("Current password is incorrect.");
+      
+
   }
 });

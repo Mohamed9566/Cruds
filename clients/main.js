@@ -111,9 +111,15 @@ function showData(){
 //DELETE 
 
 function deleteData(i) {
-  dataClient.splice(i,1);
-  localStorage.client=JSON.stringify(dataClient);
-  showData();
+  if(mood==='create'){
+    if (confirm("Are you sure you want to delete this item?")) {
+      dataClient.splice(i,1);
+      localStorage.client=JSON.stringify(dataClient);
+      showData();
+    }
+
+  }
+
 }
 showData()
 
@@ -121,9 +127,14 @@ showData()
 //Delete All Data 
 
 function deleteAll(){
-  localStorage.clear();
-  dataClient.splice(0);
-  showData()
+  if(mood==='create'){
+    if (confirm("Are you sure you want to delete all items?")) {
+        localStorage.clear();
+        dataClient.splice(0);
+        showData()
+    }
+  }
+
 }
 
 //update data
