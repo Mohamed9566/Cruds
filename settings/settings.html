@@ -3,13 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
-  <link rel="stylesheet" href="css/home.css">
+  <title>Settings</title>
+  <link rel="stylesheet" href="css/settings.css">
   <link rel="stylesheet" href="css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Strait&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+
+  <script>
+    window.onload = function() {
+      // Check if there's a saved image in local storage
+      const savedImage = localStorage.getItem("savedImage");
+      if (savedImage) {
+        // Update the content of the brandIcon span with the saved image
+        document.getElementById("brandIcon").innerHTML = `<img src="${brandIcon}" alt="Brand Image">`;
+      }
+
+    }
+  </script>
 
 </head>
 <body>
@@ -20,10 +32,10 @@
         <ul>
             <li>
                 <a href="#">
-                  <span class="icon" id="brandIcon">
-                      <ion-icon name="logo-apple"></ion-icon>
-                  </span>
-                  <span id="brandNameNavbar">Brand Name</span>
+                    <span class="icon" id="brandIcon">
+                        <ion-icon name="logo-apple"></ion-icon>
+                    </span>
+                    <span id="brandNameNavbar">Brand Name</span>
                 </a>
             </li>
 
@@ -48,7 +60,7 @@
             <li>
                 <a href="../products/products.html">
                     <span class="icon">
-                      <ion-icon name="storefront-outline"></ion-icon>                    </span>
+                      <ion-icon name="storefront-outline"></ion-icon></span>
                     <span class="title">Products</span>
                 </a>
             </li>
@@ -110,10 +122,56 @@
     <!-- =============== End Main ================ -->
 
   </div>
+  <div class="head">
+    <h1>Settings</h1>
+  </div>
+  <div class="container">
+      <form class="information">
+    <h2>Main Information For Your Company <span id="brandNameSpan"></span></h2>
+    <div class="data">
+      <label for="">Brand Name :</label>
+    <input type="text" placeholder="Enter Name Of Company" id="brandName"> 
+    </div>
+    <div class="logo">
+        <label for="imageUpload">Your Logo :</label>
+        <div class="logo-data">
+          <input type="file" name="" id="upload">
+          <label for="upload">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            choose your photo
+          </label>
+          <!-- <button onclick="document.getElementById('imageUpload').click();">Browse</button>
+          <input type="file" id="imageUpload" name="imageUpload" accept="image/*"> -->
+        </div>
+
+    </div>
+      <div class="data">
+        <label for="">Primary Phone Number :</label>
+        <input type="number" placeholder="Enter Phone Number(1)" id="primaryPhone"> 
+      </div>
+    <div class="data">
+      <label for="">Secondary Phone Number :</label>
+    <input type="number" placeholder="Enter Phone Number(2)" id="secondaryPhone"> 
+    </div>
+    <div class="data">
+      <label for="">Location :</label>
+      <input type="text" placeholder="Location" id="location">
+    </div>
+    
+    <button id="save" >Save</button>
+  </form>
+  <div class="display-container">
+    <div class="display"></div>
+    <input type="range" min="100" max="500" value="100" class="zoom-slider">
+    <!-- <button id="okButton">OK</button> -->
+    </div>
+  </div>
+
+
+    
 </div>
   </div>
-  <script src="js/home.js"></script>
-  <script src="../settings/js/settings.js"></script>
+  <script src="js/settings.js"></script>
   <script src="js/all.min.js"></script>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

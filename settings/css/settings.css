@@ -1,3 +1,4 @@
+/* =========== Google Fonts ============ */
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 
 /* =============== Globals ============== */
@@ -6,19 +7,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  margin:0 ;
-  padding: 0;
 }
-
-
-body{
-  color: #fff;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  min-height: 100vh;
-  overflow-x: hidden; 
-  background-color:#222 ;
-}
-
 
 :root {
   --blue: #2a2185;
@@ -28,7 +17,12 @@ body{
   --black2: #999;
 }
 
+body {
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color:#222 ;
 
+}
 
 .container {
   position: relative;
@@ -46,7 +40,6 @@ body{
 .navigation.active {
   width: 80px;
   transition: 0.5s;
-
 }
 
 .navigation ul {
@@ -100,7 +93,6 @@ body{
   text-align: start;
   white-space: nowrap;
 }
-
 .navigation ul li a #brandNameNavbar {
   position: relative;
   display: block;
@@ -138,21 +130,24 @@ body{
 
 }
 
-/* --------- clients ---------- */
-.clients{
+/* --------- Main ---------- */
+.main{
   position: absolute;
   width: calc(100% - 300px);
   left: 300px;
   min-height: 100vh;
-  background-color: var(--dark-color);
+  background-color: #222;
   transition: 0.5s;
   padding: 0 15px;
+  color: white;
+
 }
 
-.clients.active {
+.main.active {
   width: calc(100% - 80px);
   left: 80px;
 }
+
 
 .topbar {
   width: 100%;
@@ -161,6 +156,7 @@ body{
   justify-content: space-between;
   align-items: center;
   padding: 0 10px;
+  color: white;
 }
 
  .toggle{
@@ -197,13 +193,11 @@ body{
   border: 1px solid var(--black2);
 } 
 
-
 .search-top label ion-icon {
   position: absolute;
   top: 0;
   left: 10px;
   font-size: 1.2rem;
-  color: black;
 }
 
 .user {
@@ -223,215 +217,185 @@ body{
   object-fit: cover;
 }
 
-
-
-
-:root {
-  --dark-color:#222;
-  --button-color:rgb(87, 2, 87);
-}
-
-
-.container {
-  position: relative;
-  width: 100%;
-}
-
-
 .head{
   text-transform: uppercase;
   text-align: center;
   margin: 20px 0 ;
 }
-
-.input input{
-  width: 100%;
-  height: 30px;
-  outline: none;
-  border: none;
-  background:#111;
-  color: #fff;
-  margin: 4px 0;
-  border-radius: 4px;
-  padding: 4px 10px;
-  
-}
-
-.searchBlock input{
-  width: 100%;
-  height: 30px;
-  outline: none;
-  border: none;
-  background:#111;
-  color: #fff;
-  margin: 4px 0;
-  border-radius: 4px;
-  padding: 4px 10px;
-  
-}
-
-
-.clientData input {
-width: 30%;
-  
-}
-.input input:focus{
-  background: #000;
-  border:1px solid rgb(59, 2, 59)
-}
-.searchBlock input:focus{
-  background: #000;
-  border:1px solid rgb(59, 2, 59)
-}
-.salesVolume{
-  margin: 10px 0px;
-}
-.salesVolume label {
-  border-radius: 4px;
-  padding: 6px;
-  color: #fff;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.salesVolume select{
-  width: 15%;
+.information h2{
   text-align: center;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  background: var(--button-color);
-  color: #fff;
-  border-radius: 20px;
-  font-size: 20px;
-  font-family: "Strait", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  /* margin: 0 auto; */
+  padding: 10px ;
+  /* border: 2px solid red; */
+  width: 500px;
 }
 
-#clear{
-  width: 15%;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  background: var(--button-color);
-  color: #fff;
-  border-radius: 20px;
-  font-size: 25px;
-  font-family: "Strait", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-left: 500px;
+form{
+  display: inline-block;
+  margin-left: 20px;
+
 }
- #create{
+
+ form .data {
+  height: 45px;
+  width: 100%;
+  margin: 30px 0;
+}
+
+form .data label {
+  font-size: 18px;
+}
+
+form .data input {
   width: 100%;
   height: 30px;
+  outline: none;
   border: none;
-  cursor: pointer;
-  background: var(--button-color);
+  background:#111;
   color: #fff;
-  border-radius: 20px;
-  font-size: 25px;
-  font-family: "Strait", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-bottom: 10px ;
-}
-.control #clear {
-  width: 30%;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  background: var(--button-color);
-  color: #fff;
-  border-radius: 20px;
-  font-size: 20px;
-  font-family: "Strait", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-left: 10px;
-}
-button:hover{
-  background: rgb(122, 6, 122);
-  letter-spacing: 1px;
+  border-radius: 4px;
+  padding: 4px 10px;
+  margin-top: 10px;
 }
 
-.btnSearch{
+form .data input:focus{
+  background: #000;
+  border:1px solid rgb(59, 2, 59)
+}
+.logo {
+  display: inline;
+}
+.logo .logo-data{
+  margin-top: 10px;
+  position: relative;
+  display: inline-block;
+}
+/* .logo-data input[type="file"] {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+} */
+/* .logo-data input {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+} */
+#imageUpload{
+  width: 78px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: normal;
+  background-color: #6ea152;
+  color: white;
+}
+form  #save {
+  width: 78px;
+  height: 36px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: normal;
+  background-color: #6ea152;
+  color: white;
+}
+
+.display{
+  border: 2px solid black;
+  width: 250px;
+  height: 250px;
+  margin-left: calc(100vh/4);
+  margin-top: calc(100vh/11);
+  border-radius: 9999px;
+  overflow: hidden;
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* center horizontally */
+  align-items: center; /* center vertically */
+  position: relative;
+  border: 1px solid black;
+
 }
-.btnSearch button{
-  width: 45%;
-  height: 30px;
+#upload{
+  display: none;
+}
+.logo-data label{
+  background: #6ea152;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+/* uploaded image */
+.display img{
+  max-width: 100%;
+  max-height: 100%;
+  background-size: cover;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+  cursor: grab;
+  position: absolute; /* Position the image absolutely within the container */
+  top: 0;
+  left: 0;
+}
+.zoom-slider {
+  width: 100%;
+  margin-left: calc(100vh/8);
+  margin-top: calc(100vh/16);
+}
+#okButton{
+  width: 78px;
+  height: 36px;
   border: none;
   cursor: pointer;
-  background: var(--button-color);
-  color: #fff;
-  border-radius: 20px;
-  font-size: 20px;
-  font-family: "Strait", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 5px;
-}
-
-table{
-  width: 100%;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 24px;
   text-align: center;
-  margin: 20px 0;
-}
-
-table button{
-  width: 100%;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  background: var(--button-color);
-  color: #fff;
-  border-radius: 20px;
-  font-size: 15px;
-  font-family: "Strait", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin-top: 5px;
+  letter-spacing: normal;
+  background-color: #6ea152;
+  color: white;
+  margin-top: 10px;
+  position: absolute;
+  top: 77%;
+  right: 20%;
 
 }
-table th{
-  text-transform: uppercase;
+.container{
+  display: flex;
 }
-th,td {
-  padding: 5px;
+.display-container{
+  display: inline-block;
 }
 
-#deleteAll button{
-  width: 100%;
-  height: 30px;
-  border: none;
-  cursor: pointer;
-  background: var(--button-color);
-  color: #fff;
-  border-radius: 20px;
-  font-size: 20px;
-  font-family: "Strait", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  margin: 20px 0;
-}
 
 #brandNameSpan{
-  color: #6ea152;
-  display: inline-block;
-  }
-  
-  #brandIcon img{
-    border-radius: 50%;
-    position: relative;
-    display: block;
-    height: 60px;
-    min-width: 60px;
-    line-height: 75px;
-    text-align: center;
-  }
-  #brandIcon{
-    margin-top: 5px;
-  }
+color: #6ea152;
+display: inline-block;
+}
+
+#brandIcon img{
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  height: 60px;
+  min-width: 60px;
+  line-height: 75px;
+  text-align: center;
+}
+#brandIcon{
+  margin-top: 5px;
+}

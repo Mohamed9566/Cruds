@@ -1,3 +1,23 @@
+
+
+// Retrieve item from local storage
+let savedImage = localStorage.getItem('savedImage');
+let brandName = localStorage.getItem('brandName');
+
+
+// Check if the item exists in local storage
+if (savedImage) {
+    // Display item in the console
+    var iconElement = document.getElementById('brandIcon').innerHTML= '<img src="' + savedImage + '" alt="Saved Image">';
+}
+// Check if the item exists in local storage
+if (brandName) {
+  // Display item in the console
+  document.getElementById("brandNameNavbar").textContent =  brandName ;
+
+}
+
+
 // add hovered class to selected list item
 let list = document.querySelectorAll(".navigation li");
 

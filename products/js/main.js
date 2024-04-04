@@ -1,4 +1,27 @@
 
+
+
+
+// Retrieve item from local storage
+let savedImage = localStorage.getItem('savedImage');
+let brandName = localStorage.getItem('brandName');
+
+
+// Check if the item exists in local storage
+if (savedImage) {
+    // Display item in the console
+    var iconElement = document.getElementById('brandIcon').innerHTML= '<img src="' + savedImage + '" alt="Saved Image">';
+}
+// Check if the item exists in local storage
+if (brandName) {
+  // Display item in the console
+  document.getElementById("brandNameNavbar").textContent =  brandName ;
+
+}
+
+
+
+
 let title = document.getElementById('title');
 let price = document.getElementById('price');
 let taxes = document.getElementById('taxes');
@@ -11,11 +34,11 @@ let category = document.getElementById('category');
 let mood = 'create';
 let tmp;
 
-//getTotal function
 if (location.reload){
   clearData();
 }
 
+//getTotal function
 function getTotal() { 
   if(price.value!=''){
     let result = ( +price.value + +taxes.value + +ads.value )
